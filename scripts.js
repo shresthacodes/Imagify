@@ -1,5 +1,4 @@
-
-require('dotenv').config();
+import { TOKEN } from "./env";
 
 const input = document.getElementById("input");
 const button = document.getElementById("btn");
