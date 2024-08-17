@@ -3,7 +3,7 @@ const button = document.getElementById("btn");
 const imageContainer = document.getElementById("imageContainer");
 
 // Get the token from environment variables
-
+const TOKEN = process.env.TOKEN || process.env.TOKEN;
 async function query(data, seed) {
   const response = await fetch(
     "https://api-inference.huggingface.co/models/ZB-Tech/Text-to-Image",
