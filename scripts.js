@@ -3,7 +3,7 @@ const button = document.getElementById("btn");
 const imageContainer = document.getElementById("imageContainer");
 
 // Get the token from environment variables
-const TOKEN = import.meta.env.VITE_API_TOKEN;
+import { TOKEN } from "./.env";
 
 async function query(data, seed) {
   const response = await fetch(
