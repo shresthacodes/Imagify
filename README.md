@@ -7,7 +7,7 @@ This project allows you to generate AI-based images using the Hugging Face API. 
 - Generate 6 images based on a text prompt using Hugging Face's **Text-to-Image** model.
 - Download the generated images.
 - Responsive feedback with a **"Generating..."** message until all images are loaded.
-- Preview option for each image.
+
 
 ## Demo
 
@@ -33,4 +33,36 @@ This project allows you to generate AI-based images using the Hugging Face API. 
         ```javascript
         const token = "your_token_here";
         ```
+# Contributing
+
+Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
+
+1. **Fork the repository** to your own GitHub account.
+2. **Create a new branch** for your feature or bug fix:
+
+    ```bash
+    git checkout -b feature-name
+    ```
+
+3. **Make your changes** to the code.
+4. **Commit your changes** with a descriptive commit message:
+
+    ```bash
+    git commit -m "Add feature: description"
+    ```
+
+5. **Push your changes** to your forked repository:
+
+    ```bash
+    git push origin feature-name
+    ```
+
+6. **Create a pull request** from your branch to the main repository, describing your changes and why they should be merged.
+
+7. **Wait for the review and feedback** from the maintainers.
+
+## License
+
+This project is licensed under the MIT License.
+
 
