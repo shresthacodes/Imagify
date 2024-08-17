@@ -1,15 +1,14 @@
+const token = "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";
 const input = document.getElementById("input");
 const button = document.getElementById("btn");
 const imageContainer = document.getElementById("imageContainer");
 
-// Get the token from environment variables
-const TOKEN = process.env.TOKEN || process.env.TOKEN;
 async function query(data, seed) {
   const response = await fetch(
     "https://api-inference.huggingface.co/models/ZB-Tech/Text-to-Image",
     {
       headers: {
-        Authorization: `Bearer ${TOKEN}`,
+        Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
       method: "POST",
@@ -48,7 +47,6 @@ async function generateImages() {
         const img = document.createElement("img");
         img.src = objectUrl;
         img.alt = `Generated image ${i + 1}`;
-        img.className = "imagePreview"; // Add class for preview
 
         const downloadBtn = document.createElement("button");
         downloadBtn.className = "downloadBtn";
@@ -58,22 +56,9 @@ async function generateImages() {
           downloadImage(blob, `generated_image_${i + 1}.png`);
         });
 
-        // Add preview icon
-        const previewBtn = document.createElement("button");
-        previewBtn.className = "previewBtn";
-        previewBtn.innerHTML = "&#128065;"; // Eye icon
-        previewBtn.title = "Preview";
-        previewBtn.addEventListener("click", () => {
-          const previewWindow = window.open();
-          previewWindow.document.write(
-            `<img src="${objectUrl}" style="width: 100%; height: auto;" />`
-          );
-        });
-
         // Append elements to the wrapper and container
         wrapper.appendChild(img);
         wrapper.appendChild(downloadBtn);
-        wrapper.appendChild(previewBtn);
         imageContainer.appendChild(wrapper);
 
         // Resolve the promise after the image is loaded
