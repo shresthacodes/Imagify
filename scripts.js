@@ -3,7 +3,6 @@ const button = document.getElementById("btn");
 const imageContainer = document.getElementById("imageContainer");
 
 // Get the token from environment variables
-import { TOKEN } from "./.env";
 
 async function query(data, seed) {
   const response = await fetch(
