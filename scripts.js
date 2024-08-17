@@ -1,4 +1,4 @@
-const TOKEN = VITE_API_TOKEN;
+const TOKEN = "your-token-here";
 const input = document.getElementById("input");
 const button = document.getElementById("btn");
 const imageContainer = document.getElementById("imageContainer");
