@@ -1,4 +1,4 @@
-import { TOKEN } from "./env";
+const token = "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";
 const input = document.getElementById("input");
 const button = document.getElementById("btn");
 const imageContainer = document.getElementById("imageContainer");
@@ -8,7 +8,7 @@ async function query(data, seed) {
     "https://api-inference.huggingface.co/models/ZB-Tech/Text-to-Image",
     {
       headers: {
-        Authorization: `Bearer ${TOKEN}`,
+        Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
       method: "POST",
